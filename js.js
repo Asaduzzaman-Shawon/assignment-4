@@ -61,14 +61,60 @@ function checkDigitsInName(name) {
 }
 
 
+function calculateFinalScore(obj) {
+    if(typeof obj === 'object'){
+        let mark = 0;
+        if(obj.testScore <= 50){
+            mark = mark + obj.testScore;
+        }
+        if(obj.schoolGrade <= 30){
+            mark = mark + obj.schoolGrade;
+        }
+        if(obj.isFFamily === true){
+            mark = mark + 20;
+        }
+        else if(obj.isFFamily === false){
+            mark = mark + 0;
+        }
+        if(mark >= 80){
+            return true;
+        }
+        return false;
+    }
+    else{
+        return "Invalid Input";
+    };
+}
 
 
 
-// let dam = "sawon"
-// if(typeof dam === "string"){
-//     console.log("ri");
-// }
-// console.log(dam.includes(1,2,3,4,5,6,7,8,9,0));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
