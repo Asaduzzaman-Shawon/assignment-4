@@ -1,4 +1,5 @@
 
+
 function calculateTax(income, expenses) {
     if(typeof income !== 'number' || typeof expenses !== 'number' || income <= 0 || expenses <= 0 || expenses > income){
         return "Invalid Input";
@@ -87,98 +88,21 @@ function calculateFinalScore(obj) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function  waitingTime(waitingTimes  , serialNumber) {
+    if(Array.isArray(waitingTimes) && typeof serialNumber === "number"){
+        let time = 0;
+        for(const i of waitingTimes){
+                time = time + i   
+        }
+        const avg = time / waitingTimes.length;
+        const avgTime = Math.round(avg);
+        const beforeCandidate = serialNumber - 1 - waitingTimes.length;
+        const result = avgTime * beforeCandidate;
+        return result;
+    }
+    else{
+        return "Invalid Input";
+    }
+}
 
 
